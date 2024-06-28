@@ -1,0 +1,27 @@
+# program that takes two lists of numbers and creates a new list containing only odd numbers from the first list and even numbers from the second list.
+def get_user_list(prompt):
+    user_input = input(prompt)
+    # Split the input string into individual string numbers and convert them to integers
+    number_list = list(map(int, user_input.split()))
+    return number_list
+
+def filter_odd_even(list1, list2):
+    # Filter odd numbers from the first list
+    odd_numbers = [num for num in list1 if num % 2 != 0]
+    # Filter even numbers from the second list
+    even_numbers = [num for num in list2 if num % 2 == 0]
+    # Combine the odd and even numbers into a new list
+    new_list = odd_numbers + even_numbers
+    return new_list
+
+def main():
+    print("Welcome to the Odd-Even List Creator!")
+    list1 = get_user_list("Please enter the first list of numbers separated by spaces: ")
+    list2 = get_user_list("Please enter the second list of numbers separated by spaces: ")
+    
+    new_list = filter_odd_even(list1, list2)
+    print(f"The new list containing odd numbers from the first list and even numbers from the second list is: {new_list}")
+
+# Run the main function to start the program
+if __name__ == "__main__":
+    main()

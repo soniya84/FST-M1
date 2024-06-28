@@ -1,0 +1,19 @@
+# Writing CSV files
+
+import pandas as pd
+#Data to be written to the csv file
+data = [
+    ["Usernames", "Password"],
+    ["admin", "password"],
+    ["Charles", "Charl13"],
+    ["Deku", "AllMight"]
+]
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Write to CSV file
+csv_file = 'user_passwords.csv'
+df.to_csv(csv_file, index=False)
+
+print(f"Data successfully written to {csv_file}.")

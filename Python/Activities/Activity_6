@@ -1,0 +1,7 @@
+# Construct a pattern using the nested loop number.
+
+#number = int(input('Enter a number: '))
+
+for i in range(10):
+    print(str(i) * i)
+    

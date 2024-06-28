@@ -1,0 +1,22 @@
+# Tuple Number Checker
+
+def get_user_tuple():
+    user_input = input("Please enter a tuple of numbers separated by spaces: ")
+    # Split the input string into individual string numbers and convert them to integers
+    number_tuple = tuple(map(int, user_input.split()))
+    return number_tuple
+
+def print_divisible_by_five(number_tuple):
+    print("Numbers divisible by 5 in the tuple are:")
+    for num in number_tuple:
+        if num % 5 == 0:
+            print(num)
+
+def main():
+    print("Welcome to the Divisibility Checker!")
+    user_tuple = get_user_tuple()
+    print_divisible_by_five(user_tuple)
+
+# Run the main function to start the program
+if __name__ == "__main__":
+    main()

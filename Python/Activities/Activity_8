@@ -1,0 +1,24 @@
+# Checking if the first and last numbers of a list are the same.
+def get_user_list():
+    user_input = input("Please enter a list of numbers separated by spaces: ")
+    # Split the input string into individual string numbers and convert them to integers
+    number_list = list(map(int, user_input.split()))
+    return number_list
+
+def check_first_last_same(number_list):
+    if not number_list:
+        return False
+    return number_list[0] == number_list[-1]
+
+def main():
+    print("Welcome to the First-Last Checker!")
+    user_list = get_user_list()
+    result = check_first_last_same(user_list)
+    if result:
+        print("True: The first and last numbers of the list are the same.")
+    else:
+        print("False: The first and last numbers of the list are not the same.")
+
+# Run the main function to start the program
+if __name__ == "__main__":
+    main()

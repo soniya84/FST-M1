@@ -1,0 +1,19 @@
+# Calculate the sum of all the elements in a list.
+def get_user_list():
+    user_input = input("Please enter a list of numbers separated by spaces: ")
+    # Split the input string into individual string numbers and convert them to integers
+    number_list = list(map(int, user_input.split()))
+    return number_list
+
+def calculate_sum(number_list):
+    return sum(number_list)
+
+def main():
+    print("Welcome to the Sum Calculator!")
+    user_list = get_user_list()
+    total_sum = calculate_sum(user_list)
+    print(f"The sum of all the elements in the list is: {total_sum}")
+
+# Run the main function to start the program
+if __name__ == "__main__":
+    main()

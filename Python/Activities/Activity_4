@@ -1,0 +1,44 @@
+#Rock, Scissors, paper asking to quit.
+
+# Getting users' names.
+user1 = input("Enter user1 name: ")
+user2 = input("Enter user2 name: ")
+
+# Keeping the choice in a loop.
+while True:
+    # Reading their choices.
+    choice_1 = input(user1 + " enter your choice (rock, paper, scissors): ").lower()
+    choice_2 = input(user2 + " enter your choice (rock, paper, scissors): ").lower()
+
+    if choice_1 == choice_2:
+        print("It's a tie.")
+    elif choice_1 == 'rock':
+        if choice_2 == 'scissors':
+            print("Rock wins.")
+        else:
+            print("Paper wins.")
+    elif choice_1 == 'scissors':
+        if choice_2 == 'paper':
+            print("Scissors win!")
+        else:
+            print("Rock wins!")
+    elif choice_1 == 'paper':
+        if choice_2 == 'rock':
+            print("Paper wins.")
+        else:
+            print("Scissors win.")
+    else:
+        print("Invalid input! You have not entered rock, paper, or scissors, try again.")
+
+    # Asking the user to play again.
+    again = input('Do you want to play another round Yes/No? ').lower()
+
+    # Checking the value.
+    if again == 'yes' or again == 'y':
+        continue
+    elif again == 'no' or again == 'n':
+        print("Thanks for playing!")
+        break
+    else:
+        print('You have entered an invalid choice. Exiting now.')
+        break

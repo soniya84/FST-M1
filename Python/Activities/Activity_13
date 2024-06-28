@@ -1,0 +1,11 @@
+# Adding List Numbers
+
+def sum(elements):
+    total = 0
+    for element in elements:
+        total += element
+    print(f"The sum of all elements in the list is: {total}")
+
+# Example usage
+elements = [1, 2, 3, 4, 5]
+sum(elements)

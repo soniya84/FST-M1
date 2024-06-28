@@ -1,0 +1,6 @@
+#Multiplication Table form 1 to 10 of a given number.
+number = int(input('Enter a number: '))
+
+for i in range(1,11):
+    print(number, ' X ', i, ' = ', number*i)
+    

@@ -1,0 +1,29 @@
+#Rock, Scissors, paper game.
+
+# Getting uses name.
+user1 = input("Enter user1 name: ")
+user2 = input("Enter user2 name: ")
+
+# Reading their choice.
+choice1 = input(user1 + " enter your choice: ").lower()
+choice2 = input(user2 + " enter your choice: ").lower()
+
+if choice1 == choice2:
+    print("Its a tie.")
+elif choice1 == 'rock':
+    if choice2 == 'scissors':
+        print("Rock Wins.")
+    else:
+        print("Paper Wins.")
+elif choice1 == 'scissors':
+    if choice2 == 'paper':
+        print("Scissors wins!")
+    else:
+        print("Rock wins!")
+elif choice1 == 'paper':
+    if choice2 == 'rock':
+        print("Paper Wins.")
+    else:
+        print("Scissors Win.")
+else:
+    print("Invalid input! You have not entered rock, paper or scissors, try again.")

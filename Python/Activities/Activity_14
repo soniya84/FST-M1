@@ -1,0 +1,27 @@
+# Fibonacci Series
+
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+def generate_fibonacci_sequence(count):
+    sequence = []
+    for i in range(count):
+        sequence.append(fibonacci(i))
+    return sequence
+
+def main():
+    num = int(input("How many Fibonacci numbers would you like to generate? "))
+    if num <= 0:
+        print("Please enter a positive integer.")
+    else:
+        fibonacci_sequence = generate_fibonacci_sequence(num)
+        print(f"The first {num} numbers in the Fibonacci sequence are: {fibonacci_sequence}")
+
+# Run the main function to start the program
+if __name__ == "__main__":
+    main()

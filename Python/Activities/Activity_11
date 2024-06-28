@@ -1,0 +1,33 @@
+# Fruit Shop
+
+def create_fruit_dictionary():
+    # Creating a dictionary of fruits and their prices
+    fruit_prices = {
+        "apple": 2.99,
+        "banana": 0.99,
+        "orange": 1.49,
+        "strawberry": 3.99,
+        "grape": 2.79,
+        "watermelon": 5.99,
+        "pineapple": 4.49,
+        "mango": 1.99,
+        "blueberry": 3.49,
+        "peach": 2.49
+    }
+    return fruit_prices
+
+def check_fruit_availability(fruit_dict, fruit_name):
+    if fruit_name in fruit_dict:
+        print(f"{fruit_name.capitalize()} is available at ${fruit_dict[fruit_name]:.2f} per unit.")
+    else:
+        print(f"Sorry, {fruit_name.capitalize()} is not available.")
+
+def main():
+    print("Welcome to the Fruit Checker!")
+    fruit_dict = create_fruit_dictionary()
+    fruit_name = input("Please enter the name of the fruit you want to check: ").lower()
+    check_fruit_availability(fruit_dict, fruit_name)
+
+# Run the main function to start the program
+if __name__ == "__main__":
+    main()
